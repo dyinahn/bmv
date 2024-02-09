@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <body style="background-color: #fde9f2;" class="center">
+
+        <div>
+            <h1>Be my valentine?</h1>
+            <button id="yesButton">Yes</button>
+            <button id="no" >No</button>
+        </div>
+
+        <style>
+            div{
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                text-align: center;
+                vertical-align: middle;
+            }
+            #no{
+                position: absolute;
+            }
+            
+            img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        </style>
+
+        <img src="https://i.pinimg.com/564x/d0/59/24/d05924fe242ccb9126716c1217d0fb4e.jpg" alt="hihi" width="300" height="300" class="center">
+
+        <script>
+            document.getElementById("yesButton").addEventListener("click",function(){
+            alert("Nice. See you :3");    
+        });
+            var b = document.getElementById("no")
+            b.addEventListener("click",change);
+            function change()   {
+                var i = Math.floor(Math.random()*1000)+2;
+                var j = Math.floor(Math.random()*700)+1;
+                b.style.left = i+"px";
+                b.style.top = j+"px";
+            }
+
+            var loc = window.location.href+'';
+        
+            if (loc.indexOf('http://')==0){
+            window.location.href = loc.replace('http://','https://');
+            }
+        </script>
+    </body>
+</html>
